@@ -79,3 +79,26 @@ ul{
     gap: var(--gap);
     padding: var(--gap);
 }
+
+
+.pago{
+  background: #ccd5d0;
+  color: green;    
+}
+.processando{
+  background: #d3cdb0;
+  color: orange;
+}
+
+.falha{
+  background: #dba8a3;
+  color: red ;      
+  
+}
+
+.pago, .processando, .falha {
+  text-transform: capitalize;
+  padding: 0.75rem 1.5rem;
+  display: inline-block;
+  border-radius: var(--gap);
+}

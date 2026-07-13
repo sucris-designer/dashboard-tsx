@@ -5,10 +5,10 @@ import Meses from "./Meses";
 
 const Header = () =>{
    return(
-   <div>
+   <header>
       <DateRange/>
       <Meses/>
-   </div>
+   </header>
    );
 }
 
