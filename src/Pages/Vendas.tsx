@@ -45,13 +45,6 @@ const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
 const totalPages = Math.ceil(data.length / itemsPerPage);
   return (
     <section>
-        <div className="flex box mb" style={StyleTable}>
-            <div><h3>ID</h3></div>
-            <div><h3>Nome Cliente</h3></div>
-            <div><h3>Status</h3></div>
-            <div><h3>Preço</h3> </div>
-        </div>
-    
           {/* O MAP COMEÇA AQUI */}
           {currentItems.map((item) => {
             return (
