@@ -23,7 +23,8 @@ const StyleTable: React.CSSProperties = {
 const Link: React.CSSProperties = {
     textDecoration: "none",
     cursor:"pointer",
-    fontWeight:"600",
+    fontWeight:"500",
+    color: "var(--color-1)",
     ...StyleGeneral
 };
 
@@ -55,10 +56,10 @@ const totalPages = Math.ceil(data.length / itemsPerPage);
           {currentItems.map((item) => {
             return (
               <div style={BoxBig} className="box flex mb" key={item.id}>
-               <div><NavLink to={`vendas/${item.id}`} style={Link}>{item.id}</NavLink></div>
+               <div><NavLink to={`/vendas/${item.id}`} style={Link}>{item.id}</NavLink></div>
                <div><p>{item.nome}</p></div>
                <div><p className={`status-box ${item.status}`}>{item.status}</p></div>             
-               <div><p> {item.preco.toLocaleString("pt-br", {
+               <div><p> {(item.preco ?? 0).toLocaleString("pt-br", {
                     style: "currency",
                     currency: "BRL",
                   })}
@@ -68,7 +69,7 @@ const totalPages = Math.ceil(data.length / itemsPerPage);
           })}
 
           {/* --- CONTROLES DE PAGINAÇÃO --- */}
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', marginTop: '20px' }}>
+        <div className="controlPag">
           <button className="pagination"
             onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}

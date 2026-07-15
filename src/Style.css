@@ -114,6 +114,14 @@ ul{
     border: none;
 }
 
+.controlPag{
+     display: flex; 
+     justify-content: center;
+     align-items: center;
+     gap: var(--gap);
+     margin-top: 20px;
+}
+
 .number{
     color: var(--color-1);
 }
@@ -152,4 +160,17 @@ ul{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--gap);
+}
+
+.tx{
+    color: var(--color-2);
+    font-weight: 600;
+}
+
+/* -- Loading --*/
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
 }
