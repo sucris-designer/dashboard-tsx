@@ -7,8 +7,8 @@ const DateRange = () =>{
 
    return (
     <form className="box flex mb" onSubmit={(e) => e.preventDefault()}>    
-    <DateInput type="date" label="Início" value={inicio} onChange={({target}) => setInicio(target.value)} />{inicio}
-    <DateInput type="date"  label="Final" value={final} onChange={({target}) => setFinal(target.value)} />  {final}
+    <DateInput type="date" label="Início" value={inicio} onChange={({target}) => setInicio(target.value)} />
+    <DateInput type="date"  label="Final" value={final} onChange={({target}) => setFinal(target.value)} />
     </form>
 
    );

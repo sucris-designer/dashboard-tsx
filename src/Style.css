@@ -78,8 +78,10 @@ ul{
     display: grid;
     gap: var(--gap);
     padding: var(--gap);
+    grid-template-columns: 240px auto;
 }
 
+/* --- Vendas --*/
 
 .pago{
   background: #ccd5d0;
@@ -101,4 +103,53 @@ ul{
   padding: 0.75rem 1.5rem;
   display: inline-block;
   border-radius: var(--gap);
+}
+
+.pagination{
+    background: var(--color-2);
+    color: white;
+    border-radius: var(--gap);
+    cursor: pointer;
+    padding: 8px 16px;
+    border: none;
+}
+
+.number{
+    color: var(--color-1);
+}
+
+/*-- Sidnav --*/
+
+.sidenav li{
+  display: flex;
+  align-items: center;
+  justify-Content: center;
+  margin-bottom: var(--gap-s);
+}
+
+.sidenav li span{
+  background: var(--color-4);
+  display: flex;
+  align-items: center;
+  justify-Content: center;
+  border-radius: var(--gap);
+  width: 2rem;
+  height: 2rem;
+}
+.sidenav li a{
+    flex:1;
+    font-size: 1.125rem;
+    text-decoration: none;
+    color: var(--color-1);
+    padding: var(--gap-s) 0 ;
+    margin-left: 2px;
+}
+.sidenav li:hover span{
+    background: var(--color-3);
+}
+
+.daterange{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
 }

@@ -1,11 +1,12 @@
 import React from "react";
-import { useData } from "../Context/DataContext"; // Ajuste o import se necessário
+import { useData } from "../Context/DataContext";
 
 const Resumo = () => {
   const { data } = useData();
   if (!data) return null; 
   return (
     <section>
+     <p>Resumo</p>
       <div className="Resumo flex mb">
         <div className="box">
           <h2>Vendas</h2>
